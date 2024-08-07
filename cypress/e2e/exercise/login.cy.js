@@ -26,7 +26,7 @@ describe('Funcionalidade: Login', () => {
     it('Deve exibir uma mensagem de erro ao inserir senha inválida', () => {
         
         cy.get('#username').type('teste@124.com')
-        cy.get('#password').type('senha_errada')
+        cy.get('#password').type('senha_errada_')
         cy.get('.woocommerce-form > .button').click()
 
         cy.get('.woocommerce-error').should('contain','Erro: A senha fornecida para o e-mail')
