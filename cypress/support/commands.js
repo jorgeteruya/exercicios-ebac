@@ -22,3 +22,7 @@ Cypress.Commands.add('detalhesConta', (nome,sobrenome, usuario) =>{
     cy.get('#account_display_name').type(usuario)
     cy.get('.woocommerce-Button').click()
 })
+
+Cypress.Commands.add('substituirTracoPorEspaco', (texto) => {
+    return texto.replace(/ /g, '-');
+});
